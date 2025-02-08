@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Message</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8e8e8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .message-box {
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: scale(0.5);
+            animation: fadeInScale 1s forwards;
+        }
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .proposal-text {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 10px;
+        }
+        .button:hover {
+            background: darkred;
+        }
+        .no-button {
+            background: gray;
+        }
+        .no-button:hover {
+            background: darkgray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <div class="heart">❤️</div>
+        <h2>Will you be mine?</h2>
+        <p class="proposal-text">
+            You are the reason my world is beautiful.<br>
+            Every moment with you is special to me.<br>
+            My heart belongs to you, forever and always.<br>
+            I want to spend my life making you smile.<br>
+            Will you say yes and make my dreams come true?
+        </p>
+        <div class="buttons">
+            <button class="button" onclick="redirectTo('yes.html')">Yes, I will!</button>
+            <button class="button no-button" onclick="redirectTo('no.html')">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
